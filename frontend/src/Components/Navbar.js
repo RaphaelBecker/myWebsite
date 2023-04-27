@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-function Header() {
+function Header({ scrollToRef }) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -10,14 +10,32 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">About</Nav.Link>
-            <Nav.Link href="#pricing">Skills</Nav.Link>
-            <Nav.Link href="#pricing">Projects</Nav.Link>
-            <Nav.Link href="#pricing">Youtube</Nav.Link>
+            <Nav.Link href="#linkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </Nav.Link>
+            <Nav.Link href="#instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </Nav.Link>
+            <Nav.Link href="#twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </Nav.Link>
+            <Nav.Link href="#youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </Nav.Link>
+            <Nav.Link href="#github">
+              <i class="fa-brands fa-github"></i>
+            </Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Blog</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link href="#" onClick={() => scrollToRef("aboutRef")}>
+              About
+            </Nav.Link>
+            <Nav.Link href="#bio">Bio</Nav.Link>
+            <Nav.Link href="#" onClick={() => scrollToRef("projectsRef")}>
+              Projects
+            </Nav.Link>
+            <Nav.Link href="#blog">Blog</Nav.Link>
+            <Nav.Link href="#" onClick={() => scrollToRef("contactRef")}>
               Contact
             </Nav.Link>
           </Nav>
