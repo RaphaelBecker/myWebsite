@@ -66,7 +66,7 @@ const Intro = ({ scrollToRef }) => {
                 variant="seconday"
                 onClick={() => scrollToRef("contactRef")}
               >
-                <i class="fa-solid fa-envelope"></i> <u>contact me </u>
+                <i className="fa-solid fa-envelope"></i> <u>contact me </u>
               </Button>
             </Col>
           </Row>

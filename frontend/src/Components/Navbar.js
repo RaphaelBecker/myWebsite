@@ -11,19 +11,19 @@ function Header({ scrollToRef }) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#linkedIn">
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </Nav.Link>
             <Nav.Link href="#instagram">
-              <i class="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram"></i>
             </Nav.Link>
             <Nav.Link href="#twitter">
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
             </Nav.Link>
             <Nav.Link href="#youtube">
-              <i class="fa-brands fa-youtube"></i>
+              <i className="fa-brands fa-youtube"></i>
             </Nav.Link>
             <Nav.Link href="#github">
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github"></i>
             </Nav.Link>
           </Nav>
           <Nav>

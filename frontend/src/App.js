@@ -12,7 +12,10 @@ const styles = {
     background: "#33FF99",
   },
   skills: {
-    background: "#CCCCCC",
+    background: "#FFFFFF",
+  },
+  projects: {
+    background: "#F6F6F6",
   },
 };
 
@@ -44,7 +47,7 @@ function App() {
       <section ref={skillRef} style={styles.skills}>
         <Skills />
       </section>
-      <section ref={projectsRef} className="section contact">
+      <section ref={projectsRef} style={styles.projects}>
         <Projects />
       </section>
       <section ref={contactRef} className="section contact">
