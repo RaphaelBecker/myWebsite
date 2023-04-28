@@ -1,46 +1,78 @@
 import React from "react";
 import { Col, Container, Row, Image, Button } from "react-bootstrap";
+import Typed from "react-typed";
+
+const containerStyles = {
+  container: {
+    display: "flex",
+    height: "95vh",
+    padding: 120,
+    position: "center",
+  },
+  introText: {
+    display: "flex",
+    alignItems: "center",
+    padding: 30,
+  },
+  typingText: {
+    width: "400px",
+  },
+};
 
 const Intro = ({ scrollToRef }) => {
   return (
-    <Container style={{ padding: "30px" }}>
-      <Row>
-        <Col md={3}>
-          <Image src={"/logo512.png"} alt={"Photo"} fluid />
-        </Col>
-
-        <Col md={8}>
-          <Container>
-            <Row>
-              <h3>Hello, my name is</h3>
-            </Row>
-            <Row>
+    <Container style={containerStyles.container}>
+      <Row style={containerStyles.introText}>
+        <Col md={9}>
+          <Row>
+            <h3>Hi, I am </h3>
+          </Row>
+          <Row>
+            <div style={containerStyles.typingText}>
               <h1>
                 {" "}
-                <b>Raphael Becker</b>
-              </h1>
-            </Row>
-            <Row>
-              <h5>
-                I am a Software engineer with a passion for digital
-                transformation. Skilled in full-stack software engineering,
-                agile IT management and always eager to take on challenging
-                projects. In my spare time, I enjoy developing tools and
-                algorithms to streamline investments and automate tedious tasks.
-              </h5>
-            </Row>
-            <Row>
-              <Col>
-                <Button
-                  variant="primary"
-                  onClick={() => scrollToRef("contactRef")}
-                >
+                <b>
                   {" "}
-                  Hire me
-                </Button>
-              </Col>
-            </Row>
-          </Container>
+                  <Typed
+                    strings={[
+                      "Full Stack Developer",
+                      "IT Consultant",
+                      "Software Engineer",
+                    ]}
+                    typeSpeed={70}
+                    backDelay={1500}
+                    backSpeed={10}
+                    loop
+                    style={{ display: "inline-block" }} // set display property to inline-block
+                  />
+                </b>
+              </h1>
+            </div>
+
+            <p>based in Munich, Germany</p>
+          </Row>
+          <Row>
+            <Col md={3}>
+              <Button
+                variant="primary"
+                onClick={() => scrollToRef("projectsRef")}
+              >
+                {" "}
+                View my work
+              </Button>
+            </Col>
+            <Col md={6}>
+              <Button
+                variant="seconday"
+                onClick={() => scrollToRef("contactRef")}
+              >
+                <i class="fa-solid fa-envelope"></i> <u>contact me </u>
+              </Button>
+            </Col>
+          </Row>
+        </Col>
+        <Col md={3}>
+          <Image src={"/logo512.png"} alt={"Photo"} fluid />
         </Col>
       </Row>
     </Container>

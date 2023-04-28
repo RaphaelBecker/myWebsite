@@ -3,13 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const cardStyles = {
   container: {
-    display: "100vh",
-    border: "none",
-    boxShadow: "0 0 10px 2px #cec7c759",
-    alignItems: "start",
+    height: "100vh",
     padding: 30,
-    borderRadius: 10,
-    backgroundColor: "#FFFFFF",
   },
   skillIntro: {
     display: "flex",
@@ -18,39 +13,77 @@ const cardStyles = {
 };
 
 const Skills = () => {
+  const startWorkLive = "2017-01-01";
+
+  function getYearsSince(dateString) {
+    const workingLiveStart = new Date(dateString);
+    const today = new Date();
+    const yearsSince = today.getFullYear() - workingLiveStart.getFullYear();
+
+    // adjust for leap years
+    if (
+      workingLiveStart.getMonth() > today.getMonth() ||
+      (workingLiveStart.getMonth() === today.getMonth() &&
+        workingLiveStart.getDate() > today.getDate())
+    ) {
+      return yearsSince - 1;
+    }
+
+    return yearsSince;
+  }
+
   return (
     <Container style={cardStyles.container}>
       <Row style={cardStyles.skillIntro}>
-        <center>
+        <center style={{ padding: 30 }}>
           <h1>
-            <b>Skills Overview</b>
+            <b>Know me more</b>
           </h1>
+        </center>
+        <Col md={7}>
           <p>
             I have more than 5 years experience in IT Consultancy, including
             linux based software projects, data apps, IOT devices and web apps.
             Below is a quick overview of my main technical skill set and tools I
             use:
           </p>
-        </center>
+        </Col>
+        <Col md={3}>Years of Experience: {getYearsSince(startWorkLive)}</Col>
       </Row>
       <Row>
         <Col>
-          <h4>Web Development</h4>
-          <ul>
-            <li>Java Script</li>
-            <li>React</li>
-            <li>Node JS</li>
-            <li>CSS</li>
-          </ul>
+          <center>
+            <i class="fa-solid fa-tablet-screen-button"></i>
+            <h4>Web & App Development</h4>
+          </center>
+
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <div>
+              <ul>
+                <li>Java Script</li>
+                <li>React (Native)</li>
+                <li>Node JS</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </div>
         </Col>
         <Col>
-          <h4>Software Engineering</h4>
-          <ul>
-            <li>Python</li>
-            <li>Streamlit</li>
-            <li>Docker</li>
-            <li>Linux, WIN</li>
-          </ul>
+          <center>
+            <i class="fa-solid fa-gears"></i>
+            <h4>Software Engineering</h4>
+          </center>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <div>
+              {" "}
+              <ul>
+                <li>Python</li>
+                <li>Streamlit</li>
+                <li>Docker</li>
+                <li>Linux, WIN</li>
+              </ul>
+            </div>
+          </div>
         </Col>
         <Col>
           <h4>IT Management</h4>

@@ -2,6 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./SmallComponents/ProjectCard";
 
+const containerStyles = {
+  container: {
+    height: "100vh",
+    padding: 30,
+  },
+};
+
 const projects = [
   { id: 1, title: "Project1" },
   { id: 1, title: "Project2" },
@@ -12,7 +19,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Container style={{ marginTop: "3rem", padding: 0 }}>
+    <Container style={containerStyles.container}>
       <>
         <center>
           <h1>My latest projects:</h1>
