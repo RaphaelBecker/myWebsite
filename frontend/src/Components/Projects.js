@@ -4,7 +4,8 @@ import ProjectCard from "./SmallComponents/ProjectCard";
 
 const containerStyles = {
   container: {
-    height: "100vh",
+    display: "flex",
+    flexWrap: "wrap",
     padding: 30,
   },
 };
@@ -19,21 +20,34 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Container style={containerStyles.container}>
-      <>
-        <center>
-          <h1>My latest projects:</h1>
-        </center>
-        <Row>
-          {projects.map((project) => {
-            return (
-              <Col key={project._id} sm={12} md={6} lg={4} xl={3}>
-                <ProjectCard project={project} />
-              </Col>
-            );
-          })}
-        </Row>
-      </>
+    <Container>
+      <center>
+        <h1>My latest projects:</h1>
+      </center>
+
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {projects.map((project) => {
+          return (
+            <div key={project._id} style={{ flex: "1 1 33%" }}>
+              <ProjectCard project={project} />
+            </div>
+          );
+        })}
+      </div>
+
+      <style jsx>{`
+        @media (max-width: 992px) {
+          div {
+            flex-basis: 50%;
+          }
+        }
+
+        @media (max-width: 576px) {
+          div {
+            flex-basis: 100%;
+          }
+        }
+      `}</style>
     </Container>
   );
 };

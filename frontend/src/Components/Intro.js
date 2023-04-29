@@ -4,13 +4,13 @@ import Typed from "react-typed";
 
 const containerStyles = {
   container: {
-    display: "flex",
-    height: "95vh",
-    padding: 120,
+    paddingBottom: "2rem",
+    paddingTop: "2rem",
+    marginBottom: "auto!important",
+    marginTop: "auto!important",
     position: "center",
   },
   introText: {
-    display: "flex",
     alignItems: "center",
     padding: 30,
   },
@@ -23,7 +23,7 @@ const Intro = ({ scrollToRef }) => {
   return (
     <Container style={containerStyles.container}>
       <Row style={containerStyles.introText}>
-        <Col md={9}>
+        <Col>
           <Row>
             <h3>Hi, I am </h3>
           </Row>
@@ -31,7 +31,7 @@ const Intro = ({ scrollToRef }) => {
             <div style={containerStyles.typingText}>
               <h1>
                 {" "}
-                <b>
+                <strong>
                   {" "}
                   <Typed
                     strings={[
@@ -45,7 +45,7 @@ const Intro = ({ scrollToRef }) => {
                     loop
                     style={{ display: "inline-block" }} // set display property to inline-block
                   />
-                </b>
+                </strong>
               </h1>
             </div>
 
@@ -70,9 +70,6 @@ const Intro = ({ scrollToRef }) => {
               </Button>
             </Col>
           </Row>
-        </Col>
-        <Col md={3}>
-          <Image src={"/logo512.png"} alt={"Photo"} fluid />
         </Col>
       </Row>
     </Container>

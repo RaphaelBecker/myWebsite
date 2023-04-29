@@ -5,6 +5,8 @@ const ProjectCard = ({ project }) => {
   return (
     <Card
       style={{
+        display: "flex",
+        flexWrap: "wrap",
         margin: 10,
         padding: 5,
         backgroundImage: "url('project0.png')",

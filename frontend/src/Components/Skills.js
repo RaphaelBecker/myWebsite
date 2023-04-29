@@ -24,7 +24,12 @@ const skillset = {
 
 const componentStyles = {
   container: {
-    height: "100vh",
+    paddingBottom: "2rem",
+    paddingTop: "2rem",
+    marginBottom: "auto!important",
+    marginTop: "auto!important",
+    position: "center",
+    flexWrap: "wrap",
     padding: 30,
   },
   skillIntro: {
@@ -96,17 +101,26 @@ const Skills = () => {
           </Col>
         </center>
       </Row>
-      <Row style={{ marginTop: 10 }}>
-        <Col>
-          <SkillCard {...skillset.webDev} />
-        </Col>
-        <Col>
-          <SkillCard {...skillset.softEng} />
-        </Col>
-        <Col>
-          <SkillCard {...skillset.itConsult} />
-        </Col>
-      </Row>
+
+      <Container>
+        <Row
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          <Col xs={12} md={4} style={{ width: "300px", margin: "10px" }}>
+            <SkillCard {...skillset.webDev} />
+          </Col>
+          <Col xs={12} md={4} style={{ width: "300px", margin: "10px" }}>
+            <SkillCard {...skillset.softEng} />
+          </Col>
+          <Col xs={12} md={4} style={{ width: "300px", margin: "10px" }}>
+            <SkillCard {...skillset.itConsult} />
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 };

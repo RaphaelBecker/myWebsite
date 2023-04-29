@@ -14,9 +14,19 @@ const SkillCard = ({ icon, title, skills }) => {
 
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div>
-          <ul style={{ listStyleType: "none" }}>
+          <ul
+            style={{
+              flexWrap: "wrap",
+              justifyContent: "center",
+              padding: 0,
+              margin: 0,
+              listStyle: "none",
+            }}
+          >
             {skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
+              <li key={index} style={{ alignContent: "left" }}>
+                {skill}
+              </li>
             ))}
           </ul>
         </div>
