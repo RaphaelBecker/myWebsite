@@ -1,47 +1,90 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Nav } from "react-bootstrap";
 
 function Header({ scrollToRef }) {
+  const liStyle =
+    "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">RB</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#linkedIn">
+    <nav class="bg-transparent">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-8 px-8">
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <Nav className="">
+            <Nav.Link className="" href="#linkedIn">
               <i className="fa-brands fa-linkedin"></i>
             </Nav.Link>
-            <Nav.Link href="#instagram">
+            <Nav.Link className="px-2" href="#instagram">
               <i className="fa-brands fa-instagram"></i>
             </Nav.Link>
-            <Nav.Link href="#twitter">
+            <Nav.Link className="px-2" href="#twitter">
               <i className="fa-brands fa-twitter"></i>
             </Nav.Link>
-            <Nav.Link href="#youtube">
+            <Nav.Link className="px-2" href="#youtube">
               <i className="fa-brands fa-youtube"></i>
             </Nav.Link>
-            <Nav.Link href="#github">
+            <Nav.Link className="px-2" href="#github">
               <i className="fa-brands fa-github"></i>
             </Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="#" onClick={() => scrollToRef("aboutRef")}>
-              About
-            </Nav.Link>
-            <Nav.Link href="#bio">Bio</Nav.Link>
-            <Nav.Link href="#" onClick={() => scrollToRef("projectsRef")}>
-              Projects
-            </Nav.Link>
-            <Nav.Link href="#blog">Blog</Nav.Link>
-            <Nav.Link href="#" onClick={() => scrollToRef("contactRef")}>
-              Contact
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </div>
+
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                aria-current="page"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class={liStyle}>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" class={liStyle}>
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#" class={liStyle}>
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="#" class={liStyle}>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 
