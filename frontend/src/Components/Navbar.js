@@ -6,26 +6,24 @@ function Header({ scrollToRef }) {
 
   return (
     <nav class="bg-transparent">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-8 px-8">
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <Nav className="">
-            <Nav.Link className="" href="#linkedIn">
-              <i className="fa-brands fa-linkedin"></i>
-            </Nav.Link>
-            <Nav.Link className="px-2" href="#instagram">
-              <i className="fa-brands fa-instagram"></i>
-            </Nav.Link>
-            <Nav.Link className="px-2" href="#twitter">
-              <i className="fa-brands fa-twitter"></i>
-            </Nav.Link>
-            <Nav.Link className="px-2" href="#youtube">
-              <i className="fa-brands fa-youtube"></i>
-            </Nav.Link>
-            <Nav.Link className="px-2" href="#github">
-              <i className="fa-brands fa-github"></i>
-            </Nav.Link>
-          </Nav>
-        </div>
+      <div class="max-w-screen-xl flex text-xl xl:text-2xl sm:flex-wrap items-center justify-between mx-auto pt-8 pl-8 md:px-8">
+        <Nav class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <Nav.Link className="px-2" href="#linkedIn">
+            <i className="fa-brands fa-linkedin"></i>
+          </Nav.Link>
+          <Nav.Link className="px-2" href="#instagram">
+            <i className="fa-brands fa-instagram"></i>
+          </Nav.Link>
+          <Nav.Link className="px-2" href="#twitter">
+            <i className="fa-brands fa-twitter"></i>
+          </Nav.Link>
+          <Nav.Link className="px-2" href="#youtube">
+            <i className="fa-brands fa-youtube"></i>
+          </Nav.Link>
+          <Nav.Link className="px-2" href="#github">
+            <i className="fa-brands fa-github"></i>
+          </Nav.Link>
+        </Nav>
 
         <button
           data-collapse-toggle="navbar-default"
@@ -50,39 +48,30 @@ function Header({ scrollToRef }) {
           </svg>
         </button>
 
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <Nav class="hidden w-full md:flex md:w-auto md:flex-none">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" class={liStyle}>
+              <Nav.Link href="#about" class={liStyle}>
                 About
-              </a>
+              </Nav.Link>
             </li>
             <li>
-              <a href="#" class={liStyle}>
-                Services
-              </a>
+              <Nav.Link href="#projects" class={liStyle}>
+                Projects
+              </Nav.Link>
             </li>
             <li>
-              <a href="#" class={liStyle}>
-                Pricing
-              </a>
+              <Nav.Link href="#bio" class={liStyle}>
+                Bio
+              </Nav.Link>
             </li>
             <li>
-              <a href="#" class={liStyle}>
+              <Nav.Link href="#contact" class={liStyle}>
                 Contact
-              </a>
+              </Nav.Link>
             </li>
           </ul>
-        </div>
+        </Nav>
       </div>
     </nav>
   );
