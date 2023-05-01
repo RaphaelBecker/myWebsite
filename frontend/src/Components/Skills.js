@@ -7,8 +7,8 @@ const mySpringGreen = "#33FF99";
 const skillset = {
   webDev: {
     icon: "fa-solid fa-tablet-screen-button",
-    title: "Web & App Development",
-    skills: ["Java Script", "React (Native)", "Node JS", "CSS"],
+    title: "Responsive Web & App Development",
+    skills: ["Java Script", "React (Native)", "Node JS", "(Tailwind)CSS"],
   },
   softEng: {
     icon: "fa-solid fa-gears",

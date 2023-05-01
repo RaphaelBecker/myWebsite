@@ -8,18 +8,6 @@ import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Footer from "./Components/Footer";
 
-const styles = {
-  about: {
-    background: "#33FF99",
-  },
-  skills: {
-    background: "#FFFFFF",
-  },
-  projects: {
-    background: "#F6F6F6",
-  },
-};
-
 function App() {
   const skillRef = useRef(null);
   const projectsRef = useRef(null);
@@ -40,18 +28,16 @@ function App() {
 
   return (
     <div>
-      <Header scrollToRef={scrollToRef} />
-
-      <section ref={homeRef} style={styles.about}>
+      <section ref={homeRef}>
         <Intro scrollToRef={scrollToRef} />
       </section>
-      <section ref={skillRef} style={styles.skills}>
+      <section ref={skillRef}>
         <Skills />
       </section>
-      <section ref={projectsRef} style={styles.projects}>
+      <section ref={projectsRef}>
         <Projects />
       </section>
-      <section ref={contactRef} className="section contact">
+      <section ref={contactRef}>
         <ContactForm />
       </section>
       <Footer />
