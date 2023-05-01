@@ -2,25 +2,25 @@ import { Nav } from "react-bootstrap";
 
 function Header({ scrollToRef }) {
   const liStyle =
-    "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+    "block py-2 pl-3 pr-4 text-gray-900 rounded hover:text-green-400 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
 
   return (
     <nav class="bg-transparent">
       <div class="max-w-screen-xl flex text-xl xl:text-2xl sm:flex-wrap items-center justify-between mx-auto pt-8 pl-8 md:px-8">
         <Nav class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <Nav.Link className="px-2" href="#linkedIn">
+          <Nav.Link className="px-2  hover:text-green-400" href="#linkedIn">
             <i className="fa-brands fa-linkedin"></i>
           </Nav.Link>
-          <Nav.Link className="px-2" href="#instagram">
+          <Nav.Link className="px-2  hover:text-green-400" href="#instagram">
             <i className="fa-brands fa-instagram"></i>
           </Nav.Link>
-          <Nav.Link className="px-2" href="#twitter">
+          <Nav.Link className="px-2  hover:text-green-400" href="#twitter">
             <i className="fa-brands fa-twitter"></i>
           </Nav.Link>
-          <Nav.Link className="px-2" href="#youtube">
+          <Nav.Link className="px-2  hover:text-green-400" href="#youtube">
             <i className="fa-brands fa-youtube"></i>
           </Nav.Link>
-          <Nav.Link className="px-2" href="#github">
+          <Nav.Link className="px-2  hover:text-green-400" href="#github">
             <i className="fa-brands fa-github"></i>
           </Nav.Link>
         </Nav>
