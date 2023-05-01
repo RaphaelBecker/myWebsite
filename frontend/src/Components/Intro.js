@@ -10,7 +10,11 @@ const Intro = ({ scrollToRef }) => {
       <div className="p-8 lg:py-0 xl:px-20 xl:pt-24 2xl:pt-32 2xl:px-60">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 flex items-center justify-center">
-            <img src="logo512.png" alt="myKonterfei" />
+            <img
+              className="rounded-xl shadow-2xl m-8"
+              src="art_foto.png"
+              alt="myKonterfei"
+            />
           </div>
           <div class="w-full lg:w-1/2">
             <IntroTextBlock />

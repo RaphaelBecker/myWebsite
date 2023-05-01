@@ -6,10 +6,10 @@ const IntroTextBlock = () => {
   return (
     <div className="flex-wrap text-center lg:text-start p-8">
       <div className="flex-col text-center lg:text-start">
-        <div className="row text-3xl">Hi, I am a side hustler</div>
+        <div className="row text-3xl">Hi, I am </div>
         <div className="row text-5xl font-semibold py-3">
           <Typed
-            strings={["Developer", "IT-Consultant", "SW-Engineer"]}
+            strings={["Side-Hustler", "Code-Artist", "SW-Engineer"]}
             typeSpeed={70}
             backDelay={1500}
             backSpeed={8}
