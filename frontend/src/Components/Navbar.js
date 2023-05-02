@@ -2,7 +2,7 @@ import { Nav } from "react-bootstrap";
 
 function Header({ scrollToRef }) {
   const liStyle =
-    "block py-2 pl-3 pr-4 text-gray-900 rounded hover:text-green-400 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+    "block py-2 pl-3 pr-4 text-gray-800 rounded hover:text-green-400 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
 
   return (
     <nav class="bg-transparent">
@@ -11,16 +11,28 @@ function Header({ scrollToRef }) {
           <Nav.Link className="px-2  hover:text-green-400" href="#linkedIn">
             <i className="fa-brands fa-linkedin"></i>
           </Nav.Link>
-          <Nav.Link className="px-2  hover:text-green-400" href="#instagram">
+          <Nav.Link
+            className="px-2 text-gray-800 hover:text-green-400"
+            href="#instagram"
+          >
             <i className="fa-brands fa-instagram"></i>
           </Nav.Link>
-          <Nav.Link className="px-2  hover:text-green-400" href="#twitter">
+          <Nav.Link
+            className="px-2 text-gray-800 hover:text-green-400"
+            href="#twitter"
+          >
             <i className="fa-brands fa-twitter"></i>
           </Nav.Link>
-          <Nav.Link className="px-2  hover:text-green-400" href="#youtube">
+          <Nav.Link
+            className="px-2 text-gray-800 hover:text-green-400"
+            href="#youtube"
+          >
             <i className="fa-brands fa-youtube"></i>
           </Nav.Link>
-          <Nav.Link className="px-2  hover:text-green-400" href="#github">
+          <Nav.Link
+            className="px-2 text-gray-800 hover:text-green-400"
+            href="#github"
+          >
             <i className="fa-brands fa-github"></i>
           </Nav.Link>
         </Nav>
@@ -28,7 +40,7 @@ function Header({ scrollToRef }) {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-800 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
         >

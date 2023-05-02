@@ -9,15 +9,15 @@ const IntroTextBlock = () => {
         <div className="row text-3xl text-gray-900">Hi, I am </div>
         <div className="row text-5xl font-semibold py-3">
           <Typed
-            strings={["Side-Hustler", "Code-Artist", "SW-Engineer"]}
+            strings={["Code-Artist", "SW-Engineer", "Side-Hustler"]}
             typeSpeed={70}
             backDelay={1500}
             backSpeed={8}
             loop
             style={{
               display: "inline-block",
-              color: "#1AFDB5",
-              textShadow: "2px 4px #0361B3",
+              color: "#111827",
+              textShadow: "1px 1px 2px #0361B3",
             }}
           />
         </div>
