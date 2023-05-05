@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import SkillCard from "./SmallComponents/SkillCard";
 
 const mySpringGreen = "#33FF99";
@@ -19,34 +18,6 @@ const skillset = {
     icon: "fa-solid fa-business-time",
     title: "IT-Management",
     skills: ["SAFe", "Requirements Engineering", "Jira", "Confluence"],
-  },
-};
-
-const componentStyles = {
-  container: {
-    paddingBottom: "2rem",
-    paddingTop: "2rem",
-    marginBottom: "auto!important",
-    marginTop: "auto!important",
-    position: "center",
-    flexWrap: "wrap",
-    padding: 30,
-  },
-  skillIntro: {
-    display: "flex",
-    alignItems: "center",
-  },
-  circleStyles: {
-    width: "32px",
-    height: "32px",
-    borderRadius: "50%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: mySpringGreen,
-    color: "black",
-    fontWeight: "bold",
-    fontSize: "16px",
   },
 };
 
@@ -71,57 +42,51 @@ const Skills = () => {
   }
 
   return (
-    <Container style={componentStyles.container}>
-      <Row style={componentStyles.skillIntro}>
-        <center style={{ padding: 30 }}>
+    <div className="min-h-screen bg-gradient-to-tr from-green-100 to-blue-100">
+      <div className="p-16 flex-col items-center justify-center">
+        <center className="p-30">
           <h1>
-            <b>Know me more</b>
+            <div className="text-4xl font-bold">Know me more</div>
           </h1>
-          <Container style={{ padding: 10 }}>
+          <div className="p-8">
             <span style={{ backgroundColor: mySpringGreen, padding: 2 }}>
-              <Container style={{ display: "inline" }}>
-                My name is <b>Raphael</b>
-              </Container>
+              <div className="text-xl inline-block">
+                My name is <b className="font-bold">Raphael</b>
+              </div>
             </span>
-          </Container>
+          </div>
 
-          <Col md={7}>
-            <p style={{ padding: 30 }}>
-              I have more than 5 years experience in IT Consultancy, including
-              linux based software projects, data apps, IOT devices and web
-              apps. Below is a quick overview of my main technical skill set and
-              tools I use:
-            </p>
-          </Col>
-          <Col md={2} style={{ display: "flex", alignItems: "center" }}>
-            <span style={{ marginRight: "10px" }}>Years of Experience:</span>
-            <div style={componentStyles.circleStyles}>
-              {getYearsSince(startWorkLive)}
+          <div>
+            <div className="text-2xl p-0">
+              I have comprehensive experience in IT Consultancy, including linux
+              based software projects, data apps, IOT devices and web app
+              development. Below is a quick overview of my main technical skill
+              set and tools that I use:
             </div>
-          </Col>
+          </div>
+          <div className="p-16 flex items-center justify-center">
+            <span className="text-xl">Years of Experience: </span>
+            <span className="px-2">
+              <div class="w-8 h-8 rounded-full flex justify-center items-center bg-spring-green text-black font-bold text-lg">
+                {getYearsSince(startWorkLive)}
+              </div>
+            </span>
+          </div>
         </center>
-      </Row>
 
-      <Container>
-        <Row
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          <Col xs={12} md={4} style={{ width: "300px", margin: "10px" }}>
+        <div class="py-2 flex flex-wrap justify-center">
+          <div class="w-full md:w-1/3 lg:w-1/4 p-2">
             <SkillCard {...skillset.webDev} />
-          </Col>
-          <Col xs={12} md={4} style={{ width: "300px", margin: "10px" }}>
+          </div>
+          <div class="w-full md:w-1/3 lg:w-1/4 p-2">
             <SkillCard {...skillset.softEng} />
-          </Col>
-          <Col xs={12} md={4} style={{ width: "300px", margin: "10px" }}>
+          </div>
+          <div class="w-full md:w-1/3 lg:w-1/4 p-2">
             <SkillCard {...skillset.itConsult} />
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

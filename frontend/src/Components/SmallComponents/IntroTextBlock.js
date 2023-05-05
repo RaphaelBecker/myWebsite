@@ -1,8 +1,18 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import Typed from "react-typed";
+import { useState } from "react";
 
 const IntroTextBlock = () => {
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleClick = () => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 1000); // set the time for the animation to finish
+  };
+
   return (
     <div className="flex-wrap text-center lg:text-start p-8">
       <div className="flex-col text-center lg:text-start">
@@ -27,12 +37,22 @@ const IntroTextBlock = () => {
         </div>
       </div>
       <div className="pt-8">
-        <Button className="bg-gray-800 w-36 h-14 rounded-md focus:outline-none text-white hover:bg-teal-400 hover:text-blue-500 hover:font-semibold focus:bg-gray-500">
+        <Button className="bg-gray-800 w-36 h-14 rounded-md focus:outline-none text-white hover:bg-teal-400 hover:text-blue-500 hover:font-semibold focus:focus:animate-ping">
           View my work
         </Button>
 
-        <Button className="left-0 w-36 h-14 underline text-gray-800 hover: hover:text-teal-200 focus:text-gray-400">
-          <p className="">Contact me</p>
+        <Button
+          className="relative w-36 h-14 text-gray-800 hover:text-teal-200"
+          onClick={handleClick}
+        >
+          <p
+            className={`absolute inset-0 flex items-center justify-center ${
+              isAnimating ? "animate-ping" : ""
+            }`}
+          >
+            Contact me
+          </p>
+          <p className="relative z-10 underline">Contact me</p>
         </Button>
       </div>
     </div>

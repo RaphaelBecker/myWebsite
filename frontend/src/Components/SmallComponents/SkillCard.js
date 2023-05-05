@@ -1,31 +1,24 @@
 import React from "react";
 
 const SkillCard = ({ icon, title, skills }) => {
-  const classString = icon;
   return (
-    <div>
-      <center>
-        <div style={{ padding: 30, color: "AAAAAA" }}>
-          <i className={`${classString}`} style={{ fontSize: "4em" }}></i>
-        </div>
+    <div className="bg-slate-100 p-2 rounded-lg shadow-lg overflow-hidden text-center">
+      <div className="p-8">
+        <i className={`${icon} text-5xl text-gray-700`} />
+      </div>
+      <h4 className="text-xl font-semibold mb-4">{title}</h4>
 
-        <h4>{title}</h4>
-      </center>
-
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="flex-col justify-center">
         <div>
-          <ul
-            style={{
-              flexWrap: "wrap",
-              justifyContent: "center",
-              padding: 0,
-              margin: 0,
-              listStyle: "none",
-            }}
-          >
+          <ul className="flex-col list-none">
             {skills.map((skill, index) => (
-              <li key={index} style={{ alignContent: "left" }}>
-                {skill}
+              <li key={index} className="p-3 text-gray-600 font-medium">
+                <div className="flex-col">
+                  <div className="p-1">{skill}</div>
+                  <div className=" relative h-2 w-full rounded-md overflow-hidden bg-gray-200">
+                    <div className="absolute inset-0 bg-spring-green h-full w-1/2"></div>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
