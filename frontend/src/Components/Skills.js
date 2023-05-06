@@ -1,5 +1,7 @@
 import React from "react";
 import SkillCard from "./SmallComponents/SkillCard";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 
 const mySpringGreen = "#33FF99";
 
@@ -7,16 +9,36 @@ const skillset = {
   webDev: {
     icon: "fa-solid fa-tablet-screen-button",
     title: "Responsive Web & App Development",
+    text: "Multiple projects in SOftware Engineering including Project like A B C and so on. I am the bigest hero in the univers blabla",
     skills: ["Java Script", "React (Native)", "Node JS", "(Tailwind)CSS"],
   },
   softEng: {
     icon: "fa-solid fa-gears",
     title: "Software Engineering",
-    skills: ["Python", "C", "Docker", "Linux"],
+    text: "Multiple projects in SOftware Engineering including Project like A B C and so on. I am the bigest hero in the univers blabla",
+    skills: {
+      python: {
+        icon: "fa-brands fa-python",
+        text: "Python",
+      },
+      c: {
+        icon: "fa-brands fa-python",
+        text: "C",
+      },
+      docker: {
+        icon: "fa-brands fa-docker",
+        text: "Docker",
+      },
+      linux: {
+        icon: "fa-brands fa-ubuntu",
+        text: "Linux",
+      },
+    },
   },
   itConsult: {
     icon: "fa-solid fa-business-time",
     title: "IT-Management",
+    text: "Multiple projects in SOftware Engineering including Project like A B C and so on. I am the bigest hero in the univers blabla",
     skills: ["SAFe", "Requirements Engineering", "Jira", "Confluence"],
   },
 };
@@ -49,11 +71,15 @@ const Skills = () => {
             <div className="text-4xl font-bold">Know me more</div>
           </h1>
           <div className="p-8">
-            <span style={{ backgroundColor: mySpringGreen, padding: 2 }}>
-              <div className="text-xl inline-block">
-                My name is <b className="font-bold">Raphael</b>
-              </div>
-            </span>
+            <Flip left>
+              <span style={{ backgroundColor: mySpringGreen, padding: 2 }}>
+                <Flip left>
+                  <div className="text-xl inline-block">
+                    My name is <b className="font-bold">Raphael</b>
+                  </div>
+                </Flip>
+              </span>
+            </Flip>
           </div>
 
           <div>
@@ -67,23 +93,25 @@ const Skills = () => {
           <div className="p-16 flex items-center justify-center">
             <span className="text-xl">Years of Experience: </span>
             <span className="px-2">
-              <div class="w-8 h-8 rounded-full flex justify-center items-center bg-spring-green text-black font-bold text-lg">
-                {getYearsSince(startWorkLive)}
+              <div class="w-8 h-8 rounded-full flex justify-center items-center bg-spring-green text-black font-bold text-lg transform hover:scale-110 transition duration-300">
+                <span className="transform hover:scale-500 transition duration-200">
+                  {getYearsSince(startWorkLive)}
+                </span>
               </div>
             </span>
           </div>
         </center>
 
         <div class="py-2 flex flex-wrap justify-center">
-          <div class="w-full md:w-1/3 lg:w-1/4 md:px-4 xl:px-6 p-2">
+          <Fade left class="w-full md:w-1/3 lg:w-1/4 ">
             <SkillCard {...skillset.webDev} />
-          </div>
-          <div class="w-full md:w-1/3 lg:w-1/4 md:px-4 xl:px-6 p-2">
+          </Fade>
+          <Fade left class="w-full md:w-1/3 lg:w-1/4 ">
             <SkillCard {...skillset.softEng} />
-          </div>
-          <div class="w-full md:w-1/3 lg:w-1/4 md:px-4 xl:px-6 p-2">
+          </Fade>
+          <Fade right class="w-full md:w-1/3 lg:w-1/4 ">
             <SkillCard {...skillset.itConsult} />
-          </div>
+          </Fade>
         </div>
       </div>
     </div>

@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         "spring-green": "#33FF99",
       },
+      scale: {
+        500: "5",
+      },
     },
   },
   plugins: [],
