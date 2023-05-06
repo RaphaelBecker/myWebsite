@@ -75,13 +75,13 @@ const Skills = () => {
         </center>
 
         <div class="py-2 flex flex-wrap justify-center">
-          <div class="w-full md:w-1/3 lg:w-1/4 p-2">
+          <div class="w-full md:w-1/3 lg:w-1/4 md:px-4 xl:px-6 p-2">
             <SkillCard {...skillset.webDev} />
           </div>
-          <div class="w-full md:w-1/3 lg:w-1/4 p-2">
+          <div class="w-full md:w-1/3 lg:w-1/4 md:px-4 xl:px-6 p-2">
             <SkillCard {...skillset.softEng} />
           </div>
-          <div class="w-full md:w-1/3 lg:w-1/4 p-2">
+          <div class="w-full md:w-1/3 lg:w-1/4 md:px-4 xl:px-6 p-2">
             <SkillCard {...skillset.itConsult} />
           </div>
         </div>
