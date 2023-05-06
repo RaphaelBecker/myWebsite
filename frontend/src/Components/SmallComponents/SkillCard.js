@@ -14,7 +14,7 @@ const SkillCard = ({ icon, title, text, skills }) => {
           <ul className="flex justify-center items-center">
             {Object.entries(skills).map(([key, value]) => (
               <li key={key}>
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-spring-green text-white">
+                <div className="flex items-center justify-center mx-6 mt-6 h-12 w-12 rounded-md shadow-lg bg-spring-green text-white">
                   <i className={`${value.icon} text-2xl`} />
                 </div>
                 <div className="mt-5 text-lg leading-6 font-medium text-gray-900">

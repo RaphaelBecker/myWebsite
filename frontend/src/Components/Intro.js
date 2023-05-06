@@ -12,7 +12,7 @@ const Intro = ({ scrollToRef }) => {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 flex items-center justify-center">
               <img
-                className="rounded-xl shadow-2xl m-8 max-h-96 object-contain"
+                className="rounded-xl shadow-2xl m-8 object-contain max-h-96 md:max-h-screen"
                 src="art_foto.png"
                 alt="myKonterfei"
               />

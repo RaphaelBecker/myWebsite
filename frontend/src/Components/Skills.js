@@ -10,7 +10,24 @@ const skillset = {
     icon: "fa-solid fa-tablet-screen-button",
     title: "Responsive Web & App Development",
     text: "Multiple projects in SOftware Engineering including Project like A B C and so on. I am the bigest hero in the univers blabla",
-    skills: ["Java Script", "React (Native)", "Node JS", "(Tailwind)CSS"],
+    skills: {
+      javaScript: {
+        icon: "fa-brands fa-square-js",
+        text: "Java Script",
+      },
+      react: {
+        icon: "fa-brands fa-react",
+        text: "React",
+      },
+      node: {
+        icon: "fa-brands fa-node-js",
+        text: "Node JS",
+      },
+      css: {
+        icon: "fa-brands fa-css3",
+        text: "CSS",
+      },
+    },
   },
   softEng: {
     icon: "fa-solid fa-gears",
