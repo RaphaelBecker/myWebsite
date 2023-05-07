@@ -17,13 +17,13 @@ const Footer = () => {
             <Col md={4}>
               <h4>Navigation</h4>
               <ul className="list-unstyled">
-                <li>
+                <li key={"1"}>
                   <a href="/">Home</a>
                 </li>
-                <li>
+                <li key={"2"}>
                   <a href="/about">About Us</a>
                 </li>
-                <li>
+                <li key={"3"}>
                   <a href="/contact">Contact Us</a>
                 </li>
               </ul>

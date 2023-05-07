@@ -110,7 +110,7 @@ const Skills = () => {
           <div className="p-16 flex items-center justify-center">
             <span className="text-xl">Years of Experience: </span>
             <span className="px-2">
-              <div class="w-8 h-8 rounded-full flex justify-center items-center bg-spring-green text-black font-bold text-lg transform hover:scale-110 transition duration-300">
+              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-spring-green text-black font-bold text-lg transform hover:scale-110 transition duration-300">
                 <span className="transform hover:scale-500 transition duration-200">
                   {getYearsSince(startWorkLive)}
                 </span>
@@ -119,14 +119,14 @@ const Skills = () => {
           </div>
         </center>
 
-        <div class="py-2 flex flex-wrap justify-center">
-          <Fade left class="w-full md:w-1/3 lg:w-1/4 ">
+        <div className="py-2 flex flex-wrap justify-center">
+          <Fade left className="w-full md:w-1/3 lg:w-1/4 ">
             <SkillCard {...skillset.webDev} />
           </Fade>
-          <Fade left class="w-full md:w-1/3 lg:w-1/4 ">
+          <Fade left className="w-full md:w-1/3 lg:w-1/4 ">
             <SkillCard {...skillset.softEng} />
           </Fade>
-          <Fade right class="w-full md:w-1/3 lg:w-1/4 ">
+          <Fade right className="w-full md:w-1/3 lg:w-1/4 ">
             <SkillCard {...skillset.itConsult} />
           </Fade>
         </div>

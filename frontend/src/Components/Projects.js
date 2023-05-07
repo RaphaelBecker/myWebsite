@@ -11,11 +11,11 @@ const containerStyles = {
 };
 
 const projects = [
-  { id: 1, title: "Project1" },
-  { id: 1, title: "Project2" },
-  { id: 1, title: "Project3" },
-  { id: 1, title: "Project4" },
-  { id: 1, title: "Project5" },
+  { id: 123, title: "Project1" },
+  { id: 124, title: "Project2" },
+  { id: 125, title: "Project3" },
+  { id: 126, title: "Project4" },
+  { id: 127, title: "Project5" },
 ];
 
 const Projects = () => {
@@ -28,26 +28,12 @@ const Projects = () => {
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {projects.map((project) => {
           return (
-            <div key={project._id} style={{ flex: "1 1 33%" }}>
+            <div key={project.id} style={{ flex: "1 1 33%" }}>
               <ProjectCard project={project} />
             </div>
           );
         })}
       </div>
-
-      <style jsx>{`
-        @media (max-width: 992px) {
-          div {
-            flex-basis: 50%;
-          }
-        }
-
-        @media (max-width: 576px) {
-          div {
-            flex-basis: 100%;
-          }
-        }
-      `}</style>
     </Container>
   );
 };
