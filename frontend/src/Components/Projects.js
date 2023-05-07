@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import Flip from "react-reveal/Flip";
-import ProjectCard from "./SmallComponents/ProjectCard";
 
 const projects = [
   {
@@ -49,6 +49,14 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const toggleShowAll = () => {
+    setShowAll((prev) => !prev);
+  };
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
     <div className="min-h-screen p-8 pb-16 bg-gradient-to-tr from-gray-800 to-gray-900">
       <center>
@@ -65,7 +73,7 @@ const Projects = () => {
       </center>
 
       <div className="flex flex-wrap justify-center gap-8">
-        {projects.map((project) => (
+        {visibleProjects.map((project) => (
           <Flip left>
             <div
               key={project.id}
@@ -94,6 +102,14 @@ const Projects = () => {
           </Flip>
         ))}
       </div>
+      <center className="p-16">
+        <Button
+          onClick={toggleShowAll}
+          className="bg-gray-700 w-36 h-14 rounded-md focus:outline-none text-white hover:bg-teal-400 hover:text-blue-500 hover:font-semibold"
+        >
+          {showAll ? "Show less" : "Show all"}
+        </Button>
+      </center>
     </div>
   );
 };
