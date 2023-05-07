@@ -50,15 +50,15 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-8 pb-16 bg-gradient-to-tr from-gray-800 to-gray-900">
       <center>
-        <div className="text-4xl font-bold p-8">
+        <div className="text-4xl font-bold p-8 text-gray-100">
           Some of my most recent projects:
         </div>
         <div className="py-4 pb-8">
           <span className="bg-spring-green">
             <div className="text-xl inline-block">
-              <b className="font-bold">Portfolio</b>
+              <b className="font-bold text-gray-600">Portfolio</b>
             </div>
           </span>
         </div>
@@ -69,7 +69,7 @@ const Projects = () => {
           <Flip left>
             <div
               key={project.id}
-              className="w-3/4 sm:2/3 lg:w-1/3 xl:w-1/4 p-4 rounded-lg overflow-hidden shadow-lg"
+              className="w-3/4 sm:2/3 lg:w-1/3 xl:w-1/4 p-4 rounded-lg overflow-hidden shadow-lg bg-cyan-100"
             >
               <img
                 src={project.image}

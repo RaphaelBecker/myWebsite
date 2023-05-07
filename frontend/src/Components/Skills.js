@@ -81,7 +81,7 @@ const Skills = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-green-100 to-blue-100">
+    <div className="min-h-screen bg-gradient-to-tr from-white to-cyan-50">
       <div className="p-16 flex-col items-center justify-center">
         <center className="p-30">
           <h1>

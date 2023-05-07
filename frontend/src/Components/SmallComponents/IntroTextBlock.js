@@ -16,7 +16,7 @@ const IntroTextBlock = () => {
   return (
     <div className="flex-wrap text-center lg:text-start p-8">
       <div className="flex-col text-center lg:text-start">
-        <div className="row text-3xl text-gray-900">Hi, I am </div>
+        <div className="row text-3xl text-gray-300">Hi, I am </div>
         <div className="row text-5xl font-semibold py-3">
           <Typed
             strings={["Code-Artist", "SW-Engineer", "Side-Hustler"]}
@@ -26,13 +26,13 @@ const IntroTextBlock = () => {
             loop
             style={{
               display: "inline-block",
-              color: "#111827",
-              textShadow: "1px 1px 2px #0361B3",
+              color: "#73F1CE",
+              textShadow: "1px 1px 2px #000000",
             }}
           />
         </div>
 
-        <div className="row text-md text-gray-800">
+        <div className="row text-md text-gray-400">
           based in {<b>Munich</b>}, Germany
         </div>
       </div>
@@ -42,7 +42,7 @@ const IntroTextBlock = () => {
         </Button>
 
         <Button
-          className="relative w-36 h-14 text-gray-800 hover:text-teal-200"
+          className="relative w-36 h-14 text-spring-green hover:text-teal-200"
           onClick={handleClick}
         >
           <p

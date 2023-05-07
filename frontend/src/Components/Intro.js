@@ -5,7 +5,7 @@ import Bounce from "react-reveal/Bounce";
 
 const Intro = ({ scrollToRef }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-green-400 to-blue-600">
+    <div className="min-h-screen bg-gradient-to-tr from-gray-800 to-gray-900">
       <Header scrollToRef={scrollToRef} />
       <div className="px-8 lg:py-0 xl:px-20 xl:pt-20 2xl:pt-32 2xl:px-52">
         <Bounce left>

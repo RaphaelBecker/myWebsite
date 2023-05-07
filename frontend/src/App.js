@@ -4,13 +4,15 @@ import "./App.css";
 import Header from "./Components/Navbar";
 import ContactForm from "./Components/Contact";
 import Intro from "./Components/Intro";
-import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Companies from "./Companies";
 import Footer from "./Components/Footer";
 
 function App() {
   const skillRef = useRef(null);
   const projectsRef = useRef(null);
+  const companiesRef = useRef(null);
   const contactRef = useRef(null);
   const homeRef = useRef(null);
 
@@ -22,6 +24,8 @@ function App() {
         ? projectsRef
         : refName === "contactRef"
         ? contactRef
+        : refName === "companiesRef"
+        ? companiesRef
         : homeRef;
     window.scrollTo(0, ref.current.offsetTop);
   };
@@ -36,6 +40,9 @@ function App() {
       </section>
       <section ref={projectsRef}>
         <Projects />
+      </section>
+      <section ref={companiesRef}>
+        <Companies />
       </section>
       <section ref={contactRef}>
         <ContactForm />

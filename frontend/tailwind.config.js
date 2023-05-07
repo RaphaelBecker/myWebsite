@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "spring-green": "#33FF99",
+        "spring-green": "#73F1CE",
       },
       scale: {
         500: "5",
