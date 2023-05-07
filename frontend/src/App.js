@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
-import { Container } from "react-bootstrap";
 import "./App.css";
-import Header from "./Components/Navbar";
 import ContactForm from "./Components/Contact";
 import Intro from "./Components/Intro";
 import Skills from "./Components/Skills";
