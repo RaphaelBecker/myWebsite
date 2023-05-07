@@ -13,30 +13,93 @@ const ContactForm = () => {
     console.log(conFom);
   };
   return (
-    <div className="container mt-5">
-      <h2 className="mb-3">Any questions? Let's get in touch!</h2>
-      <form onSubmit={onSubmit}>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="name">
-            Name
-          </label>
-          <input className="form-control" type="text" id="name" required />
+    <div className="flex p-8">
+      <div className="p-8">
+        {" "}
+        Thank you for your interest in contacting me! Whether you have a
+        question, want to collaborate, or are interested in hiring me for a
+        project, I'm ready to hear from you. I'm dedicated to providing the best
+        possible experience to my clients, and I'm confident that I can help you
+        achieve your goals. To get started, simply fill out the form below with
+        your contact information and a brief message. I'll get back to you as
+        soon as possible, typically within 24-48 hours. If you prefer, you can
+        also reach out to me directly at [insert email address]. I look forward
+        to hearing from you and exploring how we can work together to bring your
+        project to life!{" "}
+      </div>
+      <form class="w-full max-w-lg mx-auto mt-10">
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-first-name"
+            >
+              First Name
+            </label>
+            <input
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-first-name"
+              type="text"
+              placeholder="John"
+            />
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-last-name"
+            >
+              Last Name
+            </label>
+            <input
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-last-name"
+              type="text"
+              placeholder="Doe"
+            />
+          </div>
         </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="email">
-            Email
-          </label>
-          <input className="form-control" type="email" id="email" required />
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-email"
+            >
+              Email
+            </label>
+            <input
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-email"
+              type="email"
+              placeholder="johndoe@example.com"
+            />
+          </div>
         </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="message">
-            Message
-          </label>
-          <textarea className="form-control" id="message" required />
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              for="grid-message"
+            >
+              Message
+            </label>
+            <textarea
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-message"
+              placeholder="Enter your message here"
+            ></textarea>
+          </div>
         </div>
-        <button className="btn btn-danger" type="submit">
-          {formStatus}
-        </button>
+        <div class="md:flex md:items-center">
+          <div class="md:w-1/3">
+            <button
+              class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              type="button"
+            >
+              Send
+            </button>
+          </div>
+          <div class="md:w-2/3"></div>
+        </div>
       </form>
     </div>
   );
