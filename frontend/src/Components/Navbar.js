@@ -10,7 +10,7 @@ function Header({ scrollToRef }) {
         <Nav className="hidden w-full md:block md:w-auto" id="navbar-default">
           <Nav.Link
             className="px-2 text-spring-green hover:text-green-400"
-            href="#linkedIn"
+            href="#khk"
           >
             <i className="fa-brands fa-linkedin"></i>
           </Nav.Link>
@@ -66,22 +66,34 @@ function Header({ scrollToRef }) {
         <Nav className="hidden w-full md:flex md:w-auto md:flex-none">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li key={"11"}>
-              <Nav.Link href="#about" className={liStyle}>
+              <Nav.Link
+                onClick={() => scrollToRef("aboutRef")}
+                className={liStyle}
+              >
                 About
               </Nav.Link>
             </li>
             <li key={"12"}>
-              <Nav.Link href="#projects" className={liStyle}>
+              <Nav.Link
+                onClick={() => scrollToRef("projectsRef")}
+                className={liStyle}
+              >
                 Projects
               </Nav.Link>
             </li>
             <li key={"13"}>
-              <Nav.Link href="#bio" className={liStyle}>
+              <Nav.Link
+                onClick={() => scrollToRef("aboutRef")}
+                className={liStyle}
+              >
                 Bio
               </Nav.Link>
             </li>
             <li key={"14"}>
-              <Nav.Link href="#contact" className={liStyle}>
+              <Nav.Link
+                onClick={() => scrollToRef("contactRef")}
+                className={liStyle}
+              >
                 Contact
               </Nav.Link>
             </li>

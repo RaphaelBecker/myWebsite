@@ -25,7 +25,7 @@ function App() {
         : refName === "companiesRef"
         ? companiesRef
         : homeRef;
-    window.scrollTo(0, ref.current.offsetTop);
+    ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -39,11 +39,11 @@ function App() {
       <section ref={projectsRef}>
         <Projects />
       </section>
-      <section ref={companiesRef}>
-        <Companies />
-      </section>
       <section ref={contactRef}>
         <ContactForm />
+      </section>
+      <section ref={companiesRef}>
+        <Companies />
       </section>
       <Footer />
     </div>

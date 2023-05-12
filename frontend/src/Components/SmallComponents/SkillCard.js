@@ -26,8 +26,8 @@ const SkillCard = ({ icon, title, text, skills }) => {
           }
         ></i>
 
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+        <a>
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-600 dark:text-white">
             {title}
           </h5>
         </a>
@@ -45,22 +45,25 @@ const SkillCard = ({ icon, title, text, skills }) => {
             <HtmlTooltip
               title={
                 <div>
-                  <Typography color="inherit">{value.text}</Typography>
-                  <div className="p-2 text-green-600">
+                  <Typography color="inherit">
+                    {" "}
+                    <b>{value.title}</b>
+                  </Typography>
+                  <div className="pt-2 pb-4 text-green-600">
+                    My experience:
                     <LinearProgress
                       variant="determinate"
                       color="inherit"
-                      value={60}
+                      value={value.level}
                     />
                   </div>
-                  <em>{"And here's"}</em> <b>{"some"}</b>{" "}
-                  <u>{"amazing content"}</u>. {"It's very engaging. Right?"}
+                  <em>{value.text}</em>
                 </div>
               }
             >
               <div>
                 <i
-                  className={`${value.icon} text-2xl text-gray-700 hover:text-green-500 hover:text-4xl transition-scale duration-300`}
+                  className={`${value.icon} text-2xl text-gray-600 hover:text-green-500 hover:text-4xl transition-scale duration-300`}
                   data-tip=""
                   data-for={key}
                 />
