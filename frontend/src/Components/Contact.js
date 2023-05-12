@@ -23,14 +23,12 @@ const ContactForm = () => {
             {" "}
             Thank you for your interest in contacting me! Whether you have a
             question, want to collaborate, or are interested in hiring me for a
-            project, I'm ready to hear from you. I'm dedicated to providing the
-            best possible experience to my clients, and I'm confident that I can
-            help you achieve your goals. To get started, simply fill out the
-            form below with your contact information and a brief message. I'll
-            get back to you as soon as possible, typically within 24-48 hours.
-            If you prefer, you can also reach out to me directly at [insert
-            email address]. I look forward to hearing from you and exploring how
-            we can work together to bring your project to life!{" "}
+            project. To get started, simply fill out the form below with your
+            contact information and a brief message. I'll get back to you as
+            soon as possible, typically within 24-48 hours. If you prefer, you
+            can also reach out to me directly at [insert email address]. I look
+            forward to hearing from you and exploring how we can work together
+            to bring your project to life!{" "}
           </p>
         </div>
         <form class="w-full lg:w-1/2 mx-auto mt-10">

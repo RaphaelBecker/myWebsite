@@ -88,9 +88,9 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-500 pt-8 text-center">
           <p className="text-gray-600">
-            © 2023 Made by myself with{" "}
+            © 2023 Made by me with{" "}
             {<i class="fa-sharp fa-solid fa-heart text-red-700"></i>} All rights
-            reserved
+            reserved.
           </p>
         </div>
       </footer>

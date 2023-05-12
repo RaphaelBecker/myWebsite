@@ -56,7 +56,24 @@ const skillset = {
     icon: "fa-solid fa-business-time",
     title: "IT-Management",
     text: "Multiple projects in SOftware Engineering including Project like A B C and so on. I am the bigest hero in the univers blabla",
-    skills: ["SAFe", "Requirements Engineering", "Jira", "Confluence"],
+    skills: {
+      python: {
+        icon: "fa-brands fa-python",
+        text: "Python",
+      },
+      c: {
+        icon: "fa-brands fa-python",
+        text: "C",
+      },
+      docker: {
+        icon: "fa-brands fa-docker",
+        text: "Docker",
+      },
+      linux: {
+        icon: "fa-brands fa-ubuntu",
+        text: "Linux",
+      },
+    },
   },
 };
 
@@ -81,7 +98,7 @@ const Skills = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-white to-cyan-50">
+    <div className="min-h-screen bg-white">
       <div className="p-16 flex-col items-center justify-center">
         <center className="p-30">
           <h1>
@@ -119,16 +136,18 @@ const Skills = () => {
           </div>
         </center>
 
-        <div className="py-2 flex flex-wrap justify-center">
-          <Fade left className="w-full md:w-1/3 lg:w-1/4 ">
-            <SkillCard {...skillset.webDev} />
-          </Fade>
-          <Fade left className="w-full md:w-1/3 lg:w-1/4 ">
-            <SkillCard {...skillset.softEng} />
-          </Fade>
-          <Fade right className="w-full md:w-1/3 lg:w-1/4 ">
-            <SkillCard {...skillset.itConsult} />
-          </Fade>
+        <div className="flex flex-col items-center justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Fade left>
+              <SkillCard {...skillset.webDev} />
+            </Fade>
+            <Fade right>
+              <SkillCard {...skillset.softEng} />
+            </Fade>
+            <Fade left>
+              <SkillCard {...skillset.itConsult} />
+            </Fade>
+          </div>
         </div>
       </div>
     </div>

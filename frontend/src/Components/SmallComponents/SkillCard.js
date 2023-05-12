@@ -1,34 +1,72 @@
 import React from "react";
 
+import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
+import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
+import { LinearProgress } from "@mui/material";
+
+const HtmlTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "#FFFFFF",
+    color: "rgba(0, 0, 0, 0.87)",
+    maxWidth: 220,
+    fontSize: theme.typography.pxToRem(12),
+    border: "1px solid #dadde9",
+  },
+}));
+
 const SkillCard = ({ icon, title, text, skills }) => {
   return (
-    <div className="bg-slate-100 m-2 md:m-4 lg:m-6 xl:m-6 p-4 rounded-lg shadow-lg overflow-hidden text-center transform hover:scale-110 transition duration-300">
-      <div className="p-8">
-        <i className={`${icon} text-5xl text-gray-700`} />
-      </div>
-      <h4 className="text-xl font-semibold mb-4">{title}</h4>
-      <div className="max-w-md lg:max-w-lg xl:max-w-xl">{text}</div>
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <center className="pb-4">
+        <i
+          className={
+            icon + " w-10 h-10 mb-2 text-gray-500 dark:text-gray-400 text-4xl"
+          }
+        ></i>
 
-      <div className="flex-col justify-center">
-        <div>
-          <ul className="flex justify-center items-center">
-            {Object.entries(skills).map(([key, value]) => (
-              <li key={key}>
-                <div className="relative">
-                  <div className="flex items-center justify-center mx-6 mt-6 h-12 w-12 rounded-md shadow-lg bg-spring-green text-white opacity-100 hover:opacity-0 transition-opacity">
-                    <i className={`${value.icon} text-2xl`} />
-                  </div>
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            {title}
+          </h5>
+        </a>
+      </center>
+      <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 inline-block">
+        {text}
+      </p>
+      <h2 className="py-2 text-green-600 text-lg font-semibold">Tech-Stack:</h2>
 
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <div className="text-lg hover:text-2xl leading-6 font-medium text-gray-500 opacity-0 hover:opacity-100 transition-opacity">
-                      {value.text}
-                    </div>
+      <div className="flex flex-wrap">
+        {Object.entries(skills).map(([key, value]) => (
+          <div key={key} className="flex text-start pr-4">
+            <HtmlTooltip
+              title={
+                <div>
+                  <Typography color="inherit">{value.text}</Typography>
+                  <div className="p-2 text-green-600">
+                    <LinearProgress
+                      variant="determinate"
+                      color="inherit"
+                      value={60}
+                    />
                   </div>
+                  <em>{"And here's"}</em> <b>{"some"}</b>{" "}
+                  <u>{"amazing content"}</u>. {"It's very engaging. Right?"}
                 </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+              }
+            >
+              <div>
+                <i
+                  className={`${value.icon} text-2xl text-gray-700 hover:text-green-500 hover:text-4xl transition-scale duration-300`}
+                  data-tip=""
+                  data-for={key}
+                />
+              </div>
+            </HtmlTooltip>
+          </div>
+        ))}
       </div>
     </div>
   );
