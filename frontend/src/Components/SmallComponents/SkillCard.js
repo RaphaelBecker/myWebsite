@@ -1,6 +1,5 @@
 import React from "react";
-
-import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import { LinearProgress } from "@mui/material";
@@ -32,15 +31,17 @@ const SkillCard = ({ icon, title, text, skills }) => {
             {title}
           </h5>
         </a>
-      </center>
-      <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 inline-block">
-        {text}
-      </p>
-      <h2 className="py-2 text-green-600 text-lg font-semibold">Tech-Stack:</h2>
 
-      <div className="flex flex-wrap">
+        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 inline-block">
+          {text}
+        </p>
+        <h2 className="pt-2 text-green-600 text-lg font-semibold">
+          Tech-Stack
+        </h2>
+      </center>
+      <div className="flex flex-wrap justify-center">
         {Object.entries(skills).map(([key, value]) => (
-          <div key={key} className="flex text-start pr-4">
+          <div key={key} className="flex text-start px-4">
             <HtmlTooltip
               title={
                 <div>

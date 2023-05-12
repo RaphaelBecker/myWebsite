@@ -136,7 +136,7 @@ const Skills = () => {
           </div>
         </center>
 
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-wrap items-center justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Fade left>
               <SkillCard {...skillset.webDev} />
