@@ -19,7 +19,7 @@ const ContactForm = () => {
       </center>
       <div className="flex flex-wrap lg:flex-nowrap">
         <div className="w-full lg:w-1/2 p-8 text-xl xl:text-2xl">
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-gray-600">
             {" "}
             Thank you for your interest in contacting me! Whether you have a
             question, want to collaborate, or are interested in hiring me for a

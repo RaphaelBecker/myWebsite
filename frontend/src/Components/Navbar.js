@@ -1,4 +1,5 @@
 import { Nav } from "react-bootstrap";
+import Tooltip from "@mui/material/Tooltip";
 
 function Header({ scrollToRef }) {
   const liStyle =
@@ -10,31 +11,41 @@ function Header({ scrollToRef }) {
         <Nav className="hidden w-full md:block md:w-auto" id="navbar-default">
           <Nav.Link
             className="px-2 text-spring-green hover:text-green-400"
-            href="#khk"
+            href="https://www.linkedin.com/in/raphael-becker-832690173/"
           >
             <i className="fa-brands fa-linkedin"></i>
           </Nav.Link>
+          <Tooltip title="available soon">
+            <Nav.Link
+              className="px-2 text-spring-green hover:text-green-400"
+              href="#instagram"
+            >
+              <i
+                className="fa-brands fa-instagram"
+                data-tip="Follow us on Instagram"
+                data-for="instagram-tooltip"
+              ></i>
+            </Nav.Link>
+          </Tooltip>
+          <Tooltip title="available soon">
+            <Nav.Link
+              className="px-2 text-spring-green hover:text-green-400"
+              href="#twitter"
+            >
+              <i className="fa-brands fa-twitter"></i>
+            </Nav.Link>
+          </Tooltip>
+          <Tooltip title="available soon">
+            <Nav.Link
+              className="px-2 text-spring-green hover:text-green-400"
+              href="#youtube"
+            >
+              <i className="fa-brands fa-youtube"></i>
+            </Nav.Link>
+          </Tooltip>
           <Nav.Link
             className="px-2 text-spring-green hover:text-green-400"
-            href="#instagram"
-          >
-            <i className="fa-brands fa-instagram"></i>
-          </Nav.Link>
-          <Nav.Link
-            className="px-2 text-spring-green hover:text-green-400"
-            href="#twitter"
-          >
-            <i className="fa-brands fa-twitter"></i>
-          </Nav.Link>
-          <Nav.Link
-            className="px-2 text-spring-green hover:text-green-400"
-            href="#youtube"
-          >
-            <i className="fa-brands fa-youtube"></i>
-          </Nav.Link>
-          <Nav.Link
-            className="px-2 text-spring-green hover:text-green-400"
-            href="#github"
+            href="https://github.com/RaphaelBecker"
           >
             <i className="fa-brands fa-github"></i>
           </Nav.Link>
@@ -82,14 +93,6 @@ function Header({ scrollToRef }) {
               </Nav.Link>
             </li>
             <li key={"13"}>
-              <Nav.Link
-                onClick={() => scrollToRef("aboutRef")}
-                className={liStyle}
-              >
-                Bio
-              </Nav.Link>
-            </li>
-            <li key={"14"}>
               <Nav.Link
                 onClick={() => scrollToRef("contactRef")}
                 className={liStyle}

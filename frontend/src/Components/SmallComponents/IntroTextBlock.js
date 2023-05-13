@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import Typed from "react-typed";
 import { useState } from "react";
 
-const IntroTextBlock = () => {
+const IntroTextBlock = ({ scrollToRef }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = () => {
@@ -37,7 +37,10 @@ const IntroTextBlock = () => {
         </div>
       </div>
       <div className="pt-8">
-        <Button className="bg-gray-800 w-36 h-14 rounded-md focus:outline-none text-white hover:bg-teal-400 hover:text-blue-500 hover:font-semibold focus:focus:animate-ping">
+        <Button
+          onClick={() => scrollToRef("projectsRef")}
+          className="bg-gray-700 w-36 h-14 rounded-md focus:outline-none text-white hover:bg-teal-400 hover:text-blue-500 hover:font-semibold"
+        >
           View my work
         </Button>
 

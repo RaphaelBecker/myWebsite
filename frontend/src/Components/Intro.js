@@ -18,7 +18,7 @@ const Intro = ({ scrollToRef }) => {
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <IntroTextBlock />
+              <IntroTextBlock scrollToRef={scrollToRef} />
             </div>
           </div>
         </Bounce>

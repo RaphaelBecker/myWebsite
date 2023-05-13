@@ -11,6 +11,7 @@ function App() {
   const skillRef = useRef(null);
   const projectsRef = useRef(null);
   const companiesRef = useRef(null);
+  const bioRef = useRef(null);
   const contactRef = useRef(null);
   const homeRef = useRef(null);
 
