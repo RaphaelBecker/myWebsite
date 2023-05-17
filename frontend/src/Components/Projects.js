@@ -89,11 +89,11 @@ const Projects = () => {
                 <div className="mt-4 flex justify-end">
                   <a
                     href={project.link}
-                    class="inline-flex items-center text-blue-600 hover:underline"
+                    className="inline-flex items-center text-blue-600 hover:underline"
                   >
                     Learn more
                     <svg
-                      class="w-5 h-5 ml-2"
+                      className="w-5 h-5 ml-2"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"

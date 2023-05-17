@@ -6,6 +6,7 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Companies from "./Companies";
 import Footer from "./Components/Footer";
+import GithubPins from "./Components/GithubPins";
 
 function App() {
   const skillRef = useRef(null);
@@ -39,6 +40,9 @@ function App() {
       </section>
       <section ref={projectsRef}>
         <Projects />
+      </section>
+      <section>
+        <GithubPins />
       </section>
       <section ref={contactRef}>
         <ContactForm />
