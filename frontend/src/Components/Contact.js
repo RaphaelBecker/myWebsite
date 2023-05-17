@@ -13,7 +13,7 @@ const ContactForm = () => {
     console.log(conFom);
   };
   return (
-    <div className="bg-slate-50 p-8">
+    <div className="bg-slate-100 pb-8 px-16 xl:px-32">
       <center>
         <div className="text-4xl font-bold pt-8 pb-4">Get in touch?</div>
       </center>

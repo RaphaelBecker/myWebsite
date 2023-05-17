@@ -21,13 +21,13 @@ const GithubPins = () => {
   }, []);
 
   return (
-    <div className="min-h-screen p-8 pb-16">
+    <div className="p-8 pb-16">
       <center>
         <div className="text-4xl font-bold p-8 text-gray-800">
           My pinned GitHub projects:
         </div>
       </center>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-8 py-8">
         {pinnedItems.map((item) => (
           <GitProjectCard key={item.id} props={item} />
         ))}

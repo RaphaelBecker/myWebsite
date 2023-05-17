@@ -18,7 +18,7 @@ const HtmlTooltip = styled(({ className, ...props }) => (
 
 const SkillCard = ({ icon, title, text, skills }) => {
   return (
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="p-8 rounded-lg overflow-hidden bg-white border border-gray-400 dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-50">
       <center className="pb-4">
         <i
           className={

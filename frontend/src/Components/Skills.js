@@ -122,56 +122,54 @@ const Skills = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="p-16 flex-col items-center justify-center">
-        <center className="p-30">
-          <h1>
-            <div className="text-4xl font-bold">Know me more</div>
-          </h1>
-          <div className="p-8">
-            <Flip left>
-              <span style={{ backgroundColor: mySpringGreen, padding: 2 }}>
-                <Flip left>
-                  <div className="text-xl inline-block">
-                    My name is <b className="font-bold">Raphael</b>
-                  </div>
-                </Flip>
-              </span>
-            </Flip>
-          </div>
-
-          <div>
-            <div className="text-2xl p-0">
-              I have comprehensive experience in IT Consultancy, including linux
-              based software projects, data apps, IOT devices and web app
-              development. Below is a quick overview of my main technical skill
-              set and tools that I use:
-            </div>
-          </div>
-          <div className="p-16 flex items-center justify-center">
-            <span className="text-xl">Years of Experience: </span>
-            <span className="px-2">
-              <div className="w-8 h-8 rounded-full flex justify-center items-center bg-spring-green text-black font-bold text-lg transform hover:scale-110 transition duration-300">
-                <span className="transform hover:scale-500 transition duration-200">
-                  {getYearsSince(startWorkLive)}
-                </span>
-              </div>
+    <div className=" p-16 xl:px-32 bg-white">
+      <center className="p-30">
+        <h1>
+          <div className="text-4xl font-bold">Know me more</div>
+        </h1>
+        <div className="p-8">
+          <Flip left>
+            <span style={{ backgroundColor: mySpringGreen, padding: 2 }}>
+              <Flip left>
+                <div className="text-xl inline-block">
+                  My name is <b className="font-bold">Raphael</b>
+                </div>
+              </Flip>
             </span>
-          </div>
-        </center>
+          </Flip>
+        </div>
 
-        <div className="flex flex-wrap items-center justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Fade left>
-              <SkillCard {...skillset.webDev} />
-            </Fade>
-            <Fade right>
-              <SkillCard {...skillset.softEng} />
-            </Fade>
-            <Fade left>
-              <SkillCard {...skillset.itConsult} />
-            </Fade>
+        <div>
+          <div className="text-2xl p-0">
+            I have comprehensive experience in IT Consultancy, including linux
+            based software projects, data apps, IOT devices and web app
+            development. Below is a quick overview of my main technical skill
+            set and tools that I use:
           </div>
+        </div>
+        <div className="p-16 flex items-center justify-center">
+          <span className="text-xl">Years of Experience: </span>
+          <span className="px-2">
+            <div className="w-8 h-8 rounded-full flex justify-center items-center bg-spring-green text-black font-bold text-lg transform hover:scale-110 transition duration-300">
+              <span className="transform hover:scale-500 transition duration-200">
+                {getYearsSince(startWorkLive)}
+              </span>
+            </div>
+          </span>
+        </div>
+      </center>
+
+      <div className="flex flex-wrap items-center justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Fade left>
+            <SkillCard {...skillset.webDev} />
+          </Fade>
+          <Fade right>
+            <SkillCard {...skillset.softEng} />
+          </Fade>
+          <Fade left>
+            <SkillCard {...skillset.itConsult} />
+          </Fade>
         </div>
       </div>
     </div>
