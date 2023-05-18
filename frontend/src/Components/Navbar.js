@@ -1,55 +1,73 @@
 import { Nav } from "react-bootstrap";
 import Tooltip from "@mui/material/Tooltip";
 
+const GradientTextLeft = ({ children }) => (
+  <div
+    style={{
+      background: "linear-gradient(to right, #f505dd 0%, #a700fa 100%)",
+      WebkitBackgroundClip: "text",
+      color: "transparent",
+      //textShadow: "1px 1px 2px #000000",
+    }}
+  >
+    {children}
+  </div>
+);
+
+const GradientTextRight = ({ children }) => (
+  <div
+    style={{
+      background: "linear-gradient(to right, #028df7 0%, #05ebf7 50%)",
+      WebkitBackgroundClip: "text",
+      color: "transparent",
+      //textShadow: "1px 1px 2px #000000",
+    }}
+  >
+    {children}
+  </div>
+);
+
 function Header({ scrollToRef }) {
-  const liStyle =
-    "block py-2 pl-3 pr-4 text-spring-green rounded hover:text-green-500 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+  const liStyle = "block py-2 pl-3 pr-4 md:border-0 md:p-0 hover:text-white";
 
   return (
     <nav className="bg-transparent">
       <div className="max-w-screen-xl flex text-xl xl:text-2xl sm:flex-wrap items-center justify-between mx-auto pt-8 pl-8 md:px-8">
-        <Nav className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <Nav.Link
-            className="px-2 text-spring-green hover:text-green-400"
-            href="https://www.linkedin.com/in/raphael-becker-832690173/"
-          >
-            <i className="fa-brands fa-linkedin"></i>
-          </Nav.Link>
-          <Tooltip title="available soon">
+        <GradientTextLeft>
+          <Nav className="hidden w-full md:block md:w-auto" id="navbar-default">
             <Nav.Link
-              className="px-2 text-spring-green hover:text-green-400"
-              href="#instagram"
+              className="px-2  hover:text-white"
+              href="https://www.linkedin.com/in/raphael-becker-832690173/"
             >
-              <i
-                className="fa-brands fa-instagram"
-                data-tip="Follow us on Instagram"
-                data-for="instagram-tooltip"
-              ></i>
+              <i className="fa-brands fa-linkedin"></i>
             </Nav.Link>
-          </Tooltip>
-          <Tooltip title="available soon">
+            <Tooltip title="available soon">
+              <Nav.Link className="px-2  hover:text-white" href="#instagram">
+                <i
+                  className="fa-brands fa-instagram"
+                  data-tip="Follow us on Instagram"
+                  data-for="instagram-tooltip"
+                ></i>
+              </Nav.Link>
+            </Tooltip>
+            <Tooltip title="available soon">
+              <Nav.Link className="px-2   hover:text-white" href="#twitter">
+                <i className="fa-brands fa-twitter"></i>
+              </Nav.Link>
+            </Tooltip>
+            <Tooltip title="available soon">
+              <Nav.Link className="px-2   hover:text-white" href="#youtube">
+                <i className="fa-brands fa-youtube"></i>
+              </Nav.Link>
+            </Tooltip>
             <Nav.Link
-              className="px-2 text-spring-green hover:text-green-400"
-              href="#twitter"
+              className="px-2  hover:text-white"
+              href="https://github.com/RaphaelBecker"
             >
-              <i className="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-github"></i>
             </Nav.Link>
-          </Tooltip>
-          <Tooltip title="available soon">
-            <Nav.Link
-              className="px-2 text-spring-green hover:text-green-400"
-              href="#youtube"
-            >
-              <i className="fa-brands fa-youtube"></i>
-            </Nav.Link>
-          </Tooltip>
-          <Nav.Link
-            className="px-2 text-spring-green hover:text-green-400"
-            href="https://github.com/RaphaelBecker"
-          >
-            <i className="fa-brands fa-github"></i>
-          </Nav.Link>
-        </Nav>
+          </Nav>
+        </GradientTextLeft>
 
         <button
           data-collapse-toggle="navbar-default"
@@ -73,35 +91,36 @@ function Header({ scrollToRef }) {
             ></path>
           </svg>
         </button>
-
-        <Nav className="hidden w-full md:flex md:w-auto md:flex-none">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li key={"11"}>
-              <Nav.Link
-                onClick={() => scrollToRef("aboutRef")}
-                className={liStyle}
-              >
-                About
-              </Nav.Link>
-            </li>
-            <li key={"12"}>
-              <Nav.Link
-                onClick={() => scrollToRef("projectsRef")}
-                className={liStyle}
-              >
-                Projects
-              </Nav.Link>
-            </li>
-            <li key={"13"}>
-              <Nav.Link
-                onClick={() => scrollToRef("contactRef")}
-                className={liStyle}
-              >
-                Contact
-              </Nav.Link>
-            </li>
-          </ul>
-        </Nav>
+        <GradientTextRight>
+          <Nav className="hidden w-full md:flex md:w-auto md:flex-none">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li key={"11"}>
+                <Nav.Link
+                  onClick={() => scrollToRef("aboutRef")}
+                  className={liStyle}
+                >
+                  About
+                </Nav.Link>
+              </li>
+              <li key={"12"}>
+                <Nav.Link
+                  onClick={() => scrollToRef("projectsRef")}
+                  className={liStyle}
+                >
+                  Projects
+                </Nav.Link>
+              </li>
+              <li key={"13"}>
+                <Nav.Link
+                  onClick={() => scrollToRef("contactRef")}
+                  className={liStyle}
+                >
+                  Contact
+                </Nav.Link>
+              </li>
+            </ul>
+          </Nav>
+        </GradientTextRight>
       </div>
     </nav>
   );

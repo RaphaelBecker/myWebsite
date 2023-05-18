@@ -24,7 +24,14 @@ const GithubPins = () => {
     <div className="p-8 pb-16">
       <center>
         <div className="text-4xl font-bold p-8 text-gray-800">
-          My pinned GitHub projects:
+          My pinned{" "}
+          <a
+            href="https://github.com/RaphaelBecker"
+            className="text-blue-700 hover:text-blue-500"
+          >
+            GitHub
+          </a>{" "}
+          projects:
         </div>
       </center>
       <div className="flex flex-wrap justify-center gap-8 py-8">

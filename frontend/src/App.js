@@ -50,7 +50,7 @@ function App() {
       <section ref={companiesRef}>
         <Companies />
       </section>
-      <Footer />
+      <Footer scrollToRef={scrollToRef} />
     </div>
   );
 }

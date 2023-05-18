@@ -1,4 +1,5 @@
 import React from "react";
+
 const ContactForm = () => {
   const [formStatus, setFormStatus] = React.useState("Send");
   const onSubmit = (e) => {
@@ -12,15 +13,17 @@ const ContactForm = () => {
     };
     console.log(conFom);
   };
+
   return (
-    <div className="bg-slate-100 pb-8 px-16 xl:px-32">
-      <center>
-        <div className="text-4xl font-bold pt-8 pb-4">Get in touch?</div>
-      </center>
-      <div className="flex flex-wrap lg:flex-nowrap">
-        <div className="w-full lg:w-1/2 p-8 text-xl xl:text-2xl">
-          <p className="leading-relaxed text-gray-600">
-            {" "}
+    <div className="bg-gradient-to-r from-gray-900 via-gray-850 to-gray-800 p-10 lg:p-20">
+      <div className="text-center">
+        <h2 className="text-4xl font-bold pb-16 text-cyan-200">
+          Get in touch?
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="text-xl xl:text-2xl text-gray-300">
+          <p>
             Thank you for your interest in contacting me! Whether you have a
             question, want to collaborate, or are interested in hiring me for a
             project. To get started, simply fill out the form below with your
@@ -28,79 +31,81 @@ const ContactForm = () => {
             soon as possible, typically within 24-48 hours. If you prefer, you
             can also reach out to me directly at [insert email address]. I look
             forward to hearing from you and exploring how we can work together
-            to bring your project to life!{" "}
+            to bring your project to life!
           </p>
         </div>
-        <form className="w-full lg:w-1/2 mx-auto mt-10">
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <form className="mt-10 lg:mt-0" onSubmit={onSubmit}>
+          <div className="md:flex md:gap-6 mb-6">
+            <div className="md:w-1/2">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="grid-first-name"
               >
                 First Name
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="grid-first-name"
                 type="text"
                 placeholder="John"
+                required
               />
             </div>
-            <div className="w-full md:w-1/2 px-3">
+            <div className="md:w-1/2">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="grid-last-name"
               >
                 Last Name
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="grid-last-name"
                 type="text"
                 placeholder="Doe"
+                required
               />
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
-              <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                htmlFor="grid-email"
-              >
-                Email
-              </label>
-              <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-email"
-                type="email"
-                placeholder="johndoe@example.com"
-              />
-            </div>
+          <div className="mb-6">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="grid-email"
+            >
+              Email
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="grid-email"
+              type="email"
+              placeholder="johndoe@example.com"
+              required
+            />
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
-              <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                htmlFor="grid-message"
-              >
-                Message
-              </label>
-              <textarea
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-message"
-                placeholder="Enter your message here"
-              ></textarea>
-            </div>
+          <div className="mb-6">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="grid-message"
+            >
+              Message
+            </label>
+            <textarea
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="grid-message"
+              placeholder="Enter your message here"
+              required
+            ></textarea>
           </div>
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
-              <button
-                className="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-                type="button"
-              >
-                Send
-              </button>
+              <div className="grid justify-center lg:justify-start">
+                <div className="relative group">
+                  <div className="animate-tilt transition group-hover:duration-200 duration-500 group-hover:opacity-100 opacity-30 absolute rounded-lg -inset-0.5 bg-gradient-to-r from-green-100 via-indigo-500 to-pink-300 filter blur"></div>
+                  <button className="relative flex items-center py-4 leading-none bg-gray-900 divide-x divide-gray-600 rounded-lg px-7">
+                    <span className="text-cyan-200 hover:text-white">Send</span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div className="md:w-2/3"></div>
           </div>
@@ -109,4 +114,5 @@ const ContactForm = () => {
     </div>
   );
 };
+
 export default ContactForm;

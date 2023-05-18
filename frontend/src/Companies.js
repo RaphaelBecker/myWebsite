@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Tooltip from "@mui/material/Tooltip";
 
 const CompanyLogosCarousel = () => {
   const responsive = {
@@ -27,7 +28,7 @@ const CompanyLogosCarousel = () => {
   return (
     <div className="p-8">
       <center>
-        <div className="text-4xl font-bold pt-8 pb-4">
+        <div className="text-4xl font-bold pt-8 pb-4 text-gray-700">
           Companies I have already worked for
         </div>
       </center>
@@ -41,16 +42,19 @@ const CompanyLogosCarousel = () => {
           autoPlaySpeed={3000}
         >
           <div className="text-center flex-col justify-center items-center carousel-item">
-            <img src="pixida-logo-sm.png" alt="Pixida" className="mx-auto" />
-            <p>Pixida GmbH</p>
+            <Tooltip title="Pixida GmbH">
+              <img src="pixida-logo-sm.png" alt="Pixida" className="" />
+            </Tooltip>
           </div>
           <div className="text-center flex-col justify-center items-center carousel-item">
-            <img src="Logo_BMW.svg" alt="BMW" className="mx-auto" />
-            <p>BMW AG</p>
+            <Tooltip title="BMW Group">
+              <img src="Logo_BMW.svg" alt="BMW" className="" />
+            </Tooltip>
           </div>
           <div className="text-center flex-col justify-center items-center carousel-item">
-            <img src="Logo_Badge_MAN_RGB.svg" alt="MAN" className="mx-auto" />
-            <p>MAN AG</p>
+            <Tooltip title="MAN AG">
+              <img src="Logo_Badge_MAN_RGB.svg" alt="MAN" className="" />
+            </Tooltip>
           </div>
         </Carousel>
       </div>

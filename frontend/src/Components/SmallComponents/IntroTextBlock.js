@@ -3,6 +3,19 @@ import { Button } from "react-bootstrap";
 import Typed from "react-typed";
 import { useState } from "react";
 
+const GradientText = ({ children }) => (
+  <div
+    style={{
+      background: "linear-gradient(to right, #c402fa 0%, #05ffb4 100%)",
+      WebkitBackgroundClip: "text",
+      color: "transparent",
+      //textShadow: "1px 1px 2px #000000",
+    }}
+  >
+    {children}
+  </div>
+);
+
 const IntroTextBlock = ({ scrollToRef }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -16,47 +29,46 @@ const IntroTextBlock = ({ scrollToRef }) => {
   return (
     <div className="flex-wrap text-center lg:text-start p-8">
       <div className="flex-col text-center lg:text-start">
-        <div className="row text-3xl text-gray-300">Hi, I am </div>
+        <div className="row text-3xl text-gray-200">Hi, I am </div>
         <div className="row text-5xl font-semibold py-3">
-          <Typed
-            strings={["Code-Artist", "SW-Engineer", "Side-Hustler"]}
-            typeSpeed={70}
-            backDelay={1500}
-            backSpeed={8}
-            loop
-            style={{
-              display: "inline-block",
-              color: "#73F1CE",
-              textShadow: "1px 1px 2px #000000",
-            }}
-          />
+          <div className="grid justify-center lg:justify-start">
+            <GradientText>
+              <Typed
+                strings={["Code-Artist", "SW-Engineer", "Side-Hustler"]}
+                typeSpeed={70}
+                backDelay={1500}
+                backSpeed={8}
+                loop
+              />
+            </GradientText>
+          </div>
         </div>
 
-        <div className="row text-md text-gray-400">
+        <div className="row text-md text-gray-200">
           based in {<b>Munich</b>}, Germany
         </div>
       </div>
       <div className="pt-8">
-        <Button
-          onClick={() => scrollToRef("projectsRef")}
-          className="bg-gray-700 w-36 h-14 rounded-md focus:outline-none text-white hover:bg-teal-400 hover:text-blue-500 hover:font-semibold"
-        >
-          View my work
-        </Button>
-
-        <Button
-          className="relative w-36 h-14 text-spring-green hover:text-teal-200"
-          onClick={handleClick}
-        >
-          <p
-            className={`absolute inset-0 flex items-center justify-center ${
-              isAnimating ? "animate-ping" : ""
-            }`}
-          >
-            Contact me
-          </p>
-          <p className="relative z-10 underline">Contact me</p>
-        </Button>
+        <div className="grid justify-center lg:justify-start">
+          <div className="relative group">
+            <div className="animate-tilt transition group-hover:duration-200 duration-500 group-hover:opacity-100 opacity-30 absolute rounded-lg -inset-0.5 bg-gradient-to-r from-green-100 via-indigo-500 to-pink-300 filter blur"></div>
+            <button className="relative flex items-center py-5 leading-none bg-black divide-x divide-gray-600 rounded-lg px-7">
+              <span
+                onClick={() => scrollToRef("projectsRef")}
+                className="pr-6 text-gray-100 hover:text-white"
+              >
+                VIew my work
+              </span>
+              <span
+                onClick={() => scrollToRef("contactRef")}
+                className="pl-6 text-indigo-400 transition duration-200 hover:text-gray-100"
+              >
+                {" "}
+                Contact me &rarr;{" "}
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
