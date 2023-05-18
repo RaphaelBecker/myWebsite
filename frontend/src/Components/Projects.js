@@ -81,8 +81,8 @@ const Projects = () => {
         <div className="flex justify-center">
           <div className="relative group">
             <div className="animate-tilt transition group-hover:duration-200 duration-500 group-hover:opacity-100 opacity-30 absolute rounded-lg -inset-0.5 bg-gradient-to-r from-green-100 via-indigo-500 to-pink-300 filter blur"></div>
-            <button className="relative flex items-center py-4 leading-none bg-gray-900 divide-x divide-gray-600 rounded-lg px-7">
-              <span className="text-gray-100" onClick={toggleShowAll}>
+            <button className="relative flex items-center leading-none bg-gray-900 divide-x divide-gray-600 rounded-lg px-7">
+              <span className="text-gray-100 p-4" onClick={toggleShowAll}>
                 {showAll ? "Show less" : "Show all"}
               </span>
             </button>

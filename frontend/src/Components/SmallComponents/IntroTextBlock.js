@@ -1,12 +1,11 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import Typed from "react-typed";
 import { useState } from "react";
 
 const GradientText = ({ children }) => (
   <div
     style={{
-      background: "linear-gradient(to right, #c402fa 0%, #05ffb4 100%)",
+      background: "linear-gradient(to right, #ff7300 0%, #05ffb4 100%)",
       WebkitBackgroundClip: "text",
       color: "transparent",
       //textShadow: "1px 1px 2px #000000",
@@ -45,23 +44,23 @@ const IntroTextBlock = ({ scrollToRef }) => {
         </div>
 
         <div className="row text-md text-gray-200">
-          based in {<b>Munich</b>}, Germany
+          based in {<b className="text-green-300">Munich,</b>} Germany
         </div>
       </div>
       <div className="pt-8">
         <div className="grid justify-center lg:justify-start">
           <div className="relative group">
             <div className="animate-tilt transition group-hover:duration-200 duration-500 group-hover:opacity-100 opacity-30 absolute rounded-lg -inset-0.5 bg-gradient-to-r from-green-100 via-indigo-500 to-pink-300 filter blur"></div>
-            <button className="relative flex items-center py-5 leading-none bg-black divide-x divide-gray-600 rounded-lg px-7">
+            <button className="relative flex items-center py-1 leading-none bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 divide-x divide-gray-600 rounded-lg px-7">
               <span
                 onClick={() => scrollToRef("projectsRef")}
-                className="pr-6 text-gray-100 hover:text-white"
+                className="pr-6 py-4 text-gray-100 hover:text-white"
               >
                 VIew my work
               </span>
               <span
                 onClick={() => scrollToRef("contactRef")}
-                className="pl-6 text-indigo-400 transition duration-200 hover:text-gray-100"
+                className="pl-6 py-2 text-green-300 transition duration-200 hover:text-gray-100"
               >
                 {" "}
                 Contact me &rarr;{" "}
