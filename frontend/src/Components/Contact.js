@@ -101,7 +101,7 @@ const ContactForm = () => {
               <div className="grid justify-center lg:justify-start">
                 <div className="relative group">
                   <div className="animate-tilt transition group-hover:duration-200 duration-500 group-hover:opacity-100 opacity-30 absolute rounded-lg -inset-0.5 bg-gradient-to-r from-green-100 via-indigo-500 to-pink-300 filter blur"></div>
-                  <button className="relative flex items-center py-4 leading-none bg-gray-900 divide-x divide-gray-600 rounded-lg px-7">
+                  <button className="relative flex items-center py-4 leading-none  bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 divide-x divide-gray-600 rounded-lg px-7">
                     <span className="text-cyan-200 hover:text-white">Send</span>
                   </button>
                 </div>

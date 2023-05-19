@@ -22,20 +22,21 @@ const SkillCard = ({ icon, title, text, skills }) => {
       <center className="pb-4">
         <i
           className={
-            icon + " w-10 h-10 mb-2 text-gray-500 dark:text-gray-400 text-4xl"
+            icon +
+            " w-10 h-10 pt-2 scale-[2.5] bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text"
           }
         ></i>
 
         <a>
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-600 dark:text-white">
+          <h1 className="mb-2 p-1 text-3xl font-semibold tracking-tight bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text dark:text-white">
             {title}
-          </h5>
+          </h1>
         </a>
 
         <p className="mb-3 font-normal text-gray-500 dark:text-gray-400 inline-block">
           {text}
         </p>
-        <h2 className="pt-2 text-green-600 text-lg font-semibold">
+        <h2 className="pt-2 bg-gradient-to-r from-green-500 to-blue-600 text-lg font-semibold inline-block text-transparent bg-clip-text">
           Tech-Stack
         </h2>
       </center>
@@ -63,7 +64,7 @@ const SkillCard = ({ icon, title, text, skills }) => {
             >
               <div>
                 <i
-                  className={`${value.icon} text-2xl text-gray-600 hover:text-green-500 hover:text-4xl transition-scale duration-300`}
+                  className={`${value.icon} text-2xl inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-4xl transition-scale duration-300`}
                   data-tip=""
                   data-for={key}
                 />

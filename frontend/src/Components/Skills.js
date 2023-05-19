@@ -129,7 +129,7 @@ const Skills = () => {
         </h1>
         <div className="p-8">
           <Flip left>
-            <span className="bg-gradient-to-r from-green-400 to-violet-700 px-2 p-1 rounded-lg">
+            <span className="bg-gradient-to-r  from-green-400 to-blue-500 px-2 p-1 rounded-lg">
               <Flip left>
                 <div className="text-xl inline-block text-white">
                   My name is <b className="font-bold ">Raphael</b>
@@ -150,7 +150,7 @@ const Skills = () => {
         <div className="p-16 flex items-center justify-center">
           <span className="text-xl">Years of Experience: </span>
           <span className="px-2">
-            <div className="w-8 h-8 rounded-full flex justify-center items-center bg-violet-600 text-white hover:text-green-500 font-bold text-lg transform hover:scale-110 transition duration-300">
+            <div className="w-8 h-8 rounded-full flex justify-center items-center  bg-blue-500 text-white hover:text-green-500 font-bold text-lg transform hover:scale-110 transition duration-300">
               <span className="transform hover:scale-500 transition duration-200">
                 {getYearsSince(startWorkLive)}
               </span>

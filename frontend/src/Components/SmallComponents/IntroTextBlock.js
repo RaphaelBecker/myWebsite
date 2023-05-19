@@ -56,7 +56,7 @@ const IntroTextBlock = ({ scrollToRef }) => {
                 onClick={() => scrollToRef("projectsRef")}
                 className="pr-6 py-4 text-gray-100 hover:text-white"
               >
-                VIew my work
+                View my work
               </span>
               <span
                 onClick={() => scrollToRef("contactRef")}

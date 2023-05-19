@@ -41,19 +41,31 @@ const CompanyLogosCarousel = () => {
           autoPlay={true}
           autoPlaySpeed={3000}
         >
-          <div className="text-center flex-col justify-center items-center carousel-item">
+          <div className="flex justify-center items-center p-4">
             <Tooltip title="Pixida GmbH">
-              <img src="pixida-logo-sm.png" alt="Pixida" className="" />
+              <img
+                src="pixida-logo-sm.png"
+                alt="Pixida"
+                className="w-16 h-16 object-contain transition duration-500 ease-in-out transform hover:scale-125 hover:shadow-2xl hover:grayscale-0 grayscale filter"
+              />
             </Tooltip>
           </div>
-          <div className="text-center flex-col justify-center items-center carousel-item">
+          <div className="flex justify-center items-center p-4">
             <Tooltip title="BMW Group">
-              <img src="Logo_BMW.svg" alt="BMW" className="" />
+              <img
+                src="Logo_BMW.svg"
+                alt="BMW"
+                className="w-16 h-16 object-contain transition duration-500 ease-in-out transform hover:scale-125 hover:shadow-2xl hover:grayscale-0 grayscale filter"
+              />
             </Tooltip>
           </div>
-          <div className="text-center flex-col justify-center items-center carousel-item">
+          <div className="flex justify-center items-center p-4">
             <Tooltip title="MAN AG">
-              <img src="Logo_Badge_MAN_RGB.svg" alt="MAN" className="" />
+              <img
+                src="Logo_Badge_MAN_RGB.svg"
+                alt="MAN"
+                className="w-16 h-16 object-contain transition duration-500 ease-in-out transform hover:scale-125 hover:shadow-2xl hover:grayscale-0 grayscale filter"
+              />
             </Tooltip>
           </div>
         </Carousel>
