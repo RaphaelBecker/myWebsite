@@ -28,7 +28,7 @@ const CompanyLogosCarousel = () => {
   return (
     <div className="p-8">
       <center>
-        <div className="text-4xl font-bold pt-8 pb-4 text-gray-700">
+        <div className="text-4xl font-bold pt-8 pb-4 text-gray-600">
           Companies I have already worked for
         </div>
       </center>

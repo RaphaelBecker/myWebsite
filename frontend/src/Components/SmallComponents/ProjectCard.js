@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
           <h3 className="text-lg font-medium text-cyan-100 mb-2">
             {project.title}
           </h3>
-          <p className="text-cyan-100 ">{project.description}</p>
+          <p className="text-cyan-200 ">{project.description}</p>
           <div className="mt-4 flex justify-end">
             <a
               href={project.link}

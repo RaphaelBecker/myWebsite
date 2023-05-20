@@ -17,12 +17,12 @@ const ContactForm = () => {
   return (
     <div className="bg-gradient-to-r from-gray-900 via-gray-850 to-gray-800 p-10 lg:p-20">
       <div className="text-center">
-        <h2 className="text-4xl font-bold pb-16 text-cyan-200">
+        <h2 className="text-4xl font-bold pb-16 bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text inline-block">
           Get in touch?
         </h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="text-xl xl:text-2xl text-gray-300">
+        <div className="text-xl xl:text-2xl text-cyan-200">
           <p>
             Thank you for your interest in contacting me! Whether you have a
             question, want to collaborate, or are interested in hiring me for a

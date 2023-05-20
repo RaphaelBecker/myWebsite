@@ -60,10 +60,10 @@ const Projects = () => {
   return (
     <div className="p-8 bg-gradient-to-r from-gray-900 via-gray-850 to-gray-800">
       <center>
-        <div className="text-4xl font-bold p-8 text-cyan-200">
+        <div className="text-4xl font-bold p-8 bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text inline-block">
           Some of my most recent projects:
         </div>
-        <div className="py-4 pb-8">
+        <div className="py-4 pb-12">
           <span className="bg-gradient-to-r  from-green-400 to-blue-500 p-1 rounded-lg">
             <div className="text-xl inline-block">
               <b className="font-bold text-black p-2">Where I am proud of</b>
@@ -77,7 +77,7 @@ const Projects = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
-      <center className="pt-16 pb-8">
+      <center className="pt-12 pb-8">
         <div className="flex justify-center">
           <div className="relative group">
             <div className="animate-tilt transition group-hover:duration-200 duration-500 group-hover:opacity-100 opacity-30 absolute rounded-lg -inset-0.5 bg-gradient-to-r from-green-100 via-indigo-500 to-pink-300 filter blur"></div>
