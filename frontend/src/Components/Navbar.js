@@ -169,6 +169,13 @@ function Header({ scrollToRef }) {
                       </Nav.Link>
 
                       <Nav.Link
+                        onClick={() => scrollToRef("blogRef")}
+                        className={liStyle}
+                      >
+                        Blog
+                      </Nav.Link>
+
+                      <Nav.Link
                         onClick={() => scrollToRef("contactRef")}
                         className={liStyle}
                       >
@@ -201,7 +208,18 @@ function Header({ scrollToRef }) {
                   Projects
                 </Nav.Link>
               </li>
+
               <li key={"13"}>
+                {" "}
+                <Nav.Link
+                  href="https://medium.com/@becker.r15"
+                  className={liStyle}
+                >
+                  Blog
+                </Nav.Link>
+              </li>
+
+              <li key={"14"}>
                 <Nav.Link
                   onClick={() => scrollToRef("contactRef")}
                   className={liStyle}
