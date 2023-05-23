@@ -46,13 +46,13 @@ function Header({ scrollToRef }) {
         <GradientTextLeft>
           <Nav className="hidden w-full md:block md:w-auto" id="navbar-default">
             <Nav.Link
-              className="px-2  hover:text-white"
+              className="pr-4  hover:text-white"
               href="https://www.linkedin.com/in/raphael-becker-832690173/"
             >
               <i className="fa-brands fa-linkedin"></i>
             </Nav.Link>
             <Tooltip title="available soon">
-              <Nav.Link className="px-2  hover:text-white" href="#instagram">
+              <Nav.Link className="px-4  hover:text-white" href="#instagram">
                 <i
                   className="fa-brands fa-instagram"
                   data-tip="Follow us on Instagram"
@@ -61,17 +61,17 @@ function Header({ scrollToRef }) {
               </Nav.Link>
             </Tooltip>
             <Tooltip title="available soon">
-              <Nav.Link className="px-2   hover:text-white" href="#twitter">
+              <Nav.Link className="px-4   hover:text-white" href="#twitter">
                 <i className="fa-brands fa-twitter"></i>
               </Nav.Link>
             </Tooltip>
             <Tooltip title="available soon">
-              <Nav.Link className="px-2   hover:text-white" href="#youtube">
+              <Nav.Link className="px-4   hover:text-white" href="#youtube">
                 <i className="fa-brands fa-youtube"></i>
               </Nav.Link>
             </Tooltip>
             <Nav.Link
-              className="px-2  hover:text-white"
+              className="px-4  hover:text-white"
               href="https://github.com/RaphaelBecker"
             >
               <i className="fa-brands fa-github"></i>
@@ -169,7 +169,7 @@ function Header({ scrollToRef }) {
                       </Nav.Link>
 
                       <Nav.Link
-                        onClick={() => scrollToRef("blogRef")}
+                        href="https://medium.com/@becker.r15"
                         className={liStyle}
                       >
                         Blog
