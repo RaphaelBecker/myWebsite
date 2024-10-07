@@ -1,4 +1,4 @@
-import { Nav, Collapse } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import { useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
 import { useMediaQuery } from "react-responsive";
